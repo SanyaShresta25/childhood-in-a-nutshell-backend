@@ -49,6 +49,9 @@ def similar_characters(name):
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+@app.route("/", methods=["GET"])
+def home():
+    return "✨ Childhood in a Nutshell Backend is Running ✨"
 
 # ---- Run App ----
 if __name__ == "__main__":
